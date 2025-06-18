@@ -12,7 +12,7 @@ if style_path.exists():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Sidebar
-st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Chemical_structure.svg/1024px-Chemical_structure.svg.png", width=100)
+st.sidebar.image("org.png", width=100)
 st.sidebar.title("🧪 Chemistry Tutor")
 page = st.sidebar.selectbox("📚 Choose a topic", [
     "🏠 Home",
@@ -32,12 +32,13 @@ if page == "🏠 Home":
     - 🔤 IUPAC Naming
     - 📈 Homologous Series
     - 🧠 Practice Quiz
+    - Made by Damilola Ayo-Afolabi and Olaniyan Oladayo
 
     Share this app or open it on your phone by scanning the QR code below:
     """)
 
     # Use your actual Streamlit Cloud app link here
-    url = "https://organic-chem-tutor-54ktmgawxf3wz88dcdm96t.streamlit.app/"
+    url = "https://organicchemistry.streamlit.app/"
     qr = qrcode.make(url)
     buf = BytesIO()
     qr.save(buf, format="PNG")
