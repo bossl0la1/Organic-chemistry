@@ -15,6 +15,7 @@ if style_path.exists():
 st.sidebar.image("org.png", width=100)
 st.sidebar.title("🧪 Chemistry Tutor")
 page = st.sidebar.selectbox("📚 Choose a topic", [
+    " Introduction to Organic chemistry",
     "🏠 Home",
     "🧬 Functional Groups",
     "🔤 IUPAC Naming",
@@ -43,6 +44,11 @@ if page == "🏠 Home":
     buf = BytesIO()
     qr.save(buf, format="PNG")
     st.image(buf.getvalue(), width=200, caption="📱 Scan to open app")
+
+# ------- INTRODUCTION -------
+elif page == "Introduction to Organic chemistry":
+    st.title("Introduction to Organic chemistry")
+    st.video("chemistry lesson.mp4" width=500)
 
 # ---------- FUNCTIONAL GROUPS ----------
 elif page == "🧬 Functional Groups":
