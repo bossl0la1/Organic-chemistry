@@ -51,9 +51,9 @@ elif page == "Introduction to Organic chemistry":
     st.title("Introduction to Organic chemistry")
     st.markdown("""
     - st.video("lesson.mp4", width=500, caption="Intro to Organic Chemistry)
-        """)
+        
     - st.image("org.png", width=100)
-   
+    """)
 
 # ---------- FUNCTIONAL GROUPS ----------
 elif page == "🧬 Functional Groups":
