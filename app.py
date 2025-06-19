@@ -45,7 +45,7 @@ if page == "🏠 Home":
     qr.save(buf, format="PNG")
     st.image(buf.getvalue(), width=200, caption="📱 Scan to open app")
 
-# ------- INTRODUCTION -------
+# ---------- INTRODUCTION ----------
 elif page == "Introduction to Organic chemistry":
     st.title("Introduction to Organic chemistry")
     st.markdown("""
