@@ -15,8 +15,8 @@ if style_path.exists():
 st.sidebar.image("org.png", width=100)
 st.sidebar.title("🧪 Chemistry Tutor")
 page = st.sidebar.selectbox("📚 Choose a topic", [
-    "Introduction to Organic chemistry",
     "🏠 Home",
+    "Introduction to Organic chemistry",
     "🧬 Functional Groups",
     "🔤 IUPAC Naming",
     "📈 Homologous Series",
