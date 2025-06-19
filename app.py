@@ -48,7 +48,10 @@ if page == "🏠 Home":
 # ------- INTRODUCTION -------
 elif page == "Introduction to Organic chemistry":
     st.title("Introduction to Organic chemistry")
-    st.video("lesson.mp4", width=500)
+    st.markdown("""
+    - st.video("lesson.mp4", width=500)
+        """)
+   
 
 # ---------- FUNCTIONAL GROUPS ----------
 elif page == "🧬 Functional Groups":
