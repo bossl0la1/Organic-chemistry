@@ -15,7 +15,7 @@ if style_path.exists():
 st.sidebar.image("org.png", width=100)
 st.sidebar.title("🧪 Chemistry Tutor")
 page = st.sidebar.selectbox("📚 Choose a topic", [
-    " Introduction to Organic chemistry",
+    "Introduction to Organic chemistry",
     "🏠 Home",
     "🧬 Functional Groups",
     "🔤 IUPAC Naming",
@@ -29,6 +29,7 @@ if page == "🏠 Home":
 
     st.markdown("""
     This app is designed to help SS2 students understand key concepts in organic chemistry:
+    -  Introduction to Organic chemistry
     - 🧬 Functional Groups
     - 🔤 IUPAC Naming
     - 📈 Homologous Series
@@ -51,6 +52,7 @@ elif page == "Introduction to Organic chemistry":
     st.markdown("""
     - st.video("lesson.mp4", width=500, caption="Intro to Organic Chemistry)
         """)
+    - st.image("org.png", width=100)
    
 
 # ---------- FUNCTIONAL GROUPS ----------
