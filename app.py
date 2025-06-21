@@ -148,7 +148,11 @@ elif page == "🧠 Quiz":
         {"q":"Which has a triple bond?", "a":"Alkyne", "opts":["Alkene","Alkyne","Alkane"]},
         {"q":"Aromatic ring is?", "a":"Benzene", "opts":["Cyclohexane","Benzene","Hexane"]},
         {"q":"IUPAC suffix for aldehyde?", "a":"-al", "opts":["-ol","-one","-al"]},
-        {"q":"What is the IUPAC name for CH₃-CH₂-CH₂-COOH?", "a":"Butanoic acid", "opts"["Butanoic acid","Propanoic acid","Ethanoic acid"]}
+        {"q":"What is the IUPAC name for CH₃-CH₂-CH₂-COOH?", "a":"Butanoic acid", "opts":["Butanoic acid","Propanoic acid","Ethanoic acid"]},
+        {"q":"Which of the following is a functional group present in alcohols?", "a":"-OH", "opts":["-OH","-COOH","-CHO"]},
+        {"q":"What type of reaction occurs when an alkene reacts with hydrogen?", "a":"Addition", "opts":["Substitution","Addition","Elimination"]},
+        {"q":"What is the primary product of the complete combustion of propane (C₃H₈)?", "a":"Carbon dioxide and water", "opts":["Carbon monoxide and water","Carbon dioxide and water","Carbon and water"]},
+        {"q":"What is the primary product of the incomplete combustion of propane (C₃H₈)?", "a":"Carbon monoxide,Carbon and water", "opts":["Carbon,"Carbon dioxide","Carbon monoxide, Carbon and water"]},
     ]
 
     score = 0
@@ -163,3 +167,4 @@ elif page == "🧠 Quiz":
                 st.error(f"❌ Incorrect. Correct answer: {q['a']}")
 
     st.markdown(f"### 🏁 Final Score: **{score}/{len(questions)}**")
+    
