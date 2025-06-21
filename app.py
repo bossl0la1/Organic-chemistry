@@ -148,6 +148,7 @@ elif page == "🧠 Quiz":
         {"q":"Which has a triple bond?", "a":"Alkyne", "opts":["Alkene","Alkyne","Alkane"]},
         {"q":"Aromatic ring is?", "a":"Benzene", "opts":["Cyclohexane","Benzene","Hexane"]},
         {"q":"IUPAC suffix for aldehyde?", "a":"-al", "opts":["-ol","-one","-al"]},
+        {"q":"What is the IUPAC name for CH₃-CH₂-CH₂-COOH?", "a":"Butanoic acid", "opts"["Butanoic acid","Propanoic acid","Ethanoic acid"]}
     ]
 
     score = 0
