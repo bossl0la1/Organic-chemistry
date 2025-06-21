@@ -152,7 +152,7 @@ elif page == "🧠 Quiz":
         {"q":"Which of the following is a functional group present in alcohols?", "a":"-OH", "opts":["-OH","-COOH","-CHO"]},
         {"q":"What type of reaction occurs when an alkene reacts with hydrogen?", "a":"Addition", "opts":["Substitution","Addition","Elimination"]},
         {"q":"What is the primary product of the complete combustion of propane (C₃H₈)?", "a":"Carbon dioxide and water", "opts":["Carbon monoxide and water","Carbon dioxide and water","Carbon and water"]},
-        {"q":"What is the primary product of the incomplete combustion of propane (C₃H₈)?", "a":"Carbon monoxide,Carbon and water", "opts":["Carbon,"Carbon dioxide","Carbon monoxide, Carbon and water"]},
+        {"q":"What is the primary product of the incomplete combustion of propane (C₃H₈)?", "a":"Carbon monoxide,Carbon and water", "opts":["Carbon","Carbon dioxide","Carbon monoxide, Carbon and water"]},
     ]
 
     score = 0
