@@ -49,6 +49,7 @@ if page == "🏠 Home":
 # ---------- INTRODUCTION ----------
 elif page == "Introduction to Organic chemistry":
     st.title("Introduction to Organic chemistry")
+    st.write("Hi")
     st.video("lesson.mp4", width=500) 
     st.image("org.png", width=100)
     
