@@ -167,6 +167,7 @@ elif page == "🧠 Quiz":
                 st.error(f"❌ Incorrect. Correct answer: {q['a']}")
 
     st.markdown(f"### 🏁 Final Score: **{score}/{len(questions)}**")
+    st.markdown(
         if score >=5:
             st.write("You have not yet  understood organic chemistry")
         elif score >=10:
@@ -175,4 +176,5 @@ elif page == "🧠 Quiz":
             st.write("You have almost developed mastery of organic chemistry")
         elif score >=20:
             st.write("You have attained mastery of organic chemistry")
+                    )
     
