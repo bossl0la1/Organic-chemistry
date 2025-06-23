@@ -165,14 +165,16 @@ elif page == "🧠 Quiz":
                 score += 1
             else:
                 st.error(f"❌ Incorrect. Correct answer: {q['a']}")
-         if score >=5:
-            st.write("You have not yet  understood organic chemistry")
-        elif score >=10:
-            st.write("You are beginning to understand organic chemistry but not yet fully")
-        elif score >=15:
-            st.write("You have almost developed mastery of organic chemistry")
-        elif score >=20:
-            st.write("You have attained mastery of organic chemistry")
-    st.markdown(f"### 🏁 Final Score: **{score}/{len(questions)}**")
+   if st.button("Submit"):
+        st.markdown(f"### 🏁 Final Score: **{score}/{len(questions)}**")
+        if score < 5:
+            st.write("You have not yet understood organic chemistry.")
+        elif score < 10:
+            st.write("You are beginning to understand organic chemistry but not yet fully.")
+        elif score < 15:
+            st.write("You have almost developed mastery of organic chemistry.")
+        else:
+            st.write("You have attained mastery of organic chemistry!")
+
    
     
