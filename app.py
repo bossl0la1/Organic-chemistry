@@ -165,8 +165,7 @@ elif page == "🧠 Quiz":
                 score += 1
             else:
                 st.error(f"❌ Incorrect. Correct answer: {q['a']}")
-        if st.button("Submit"):
-            st.markdown(f"### 🏁 Final Score: **{score}/{len(questions)}**")
+        st.markdown(f"### 🏁 Final Score: **{score}/{len(questions)}**")
             if score < 5:
                 st.write("You have not yet understood organic chemistry.")
             elif score < 10:
