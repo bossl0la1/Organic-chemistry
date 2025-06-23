@@ -6,7 +6,7 @@ from io import BytesIO
 st.set_page_config(page_title="Organic Chemistry Tutor", page_icon="🧪", layout="wide")
 
 # Optional styling
-style_path = Path("assets/styles.css")
+style_path = Path("styles.css")
 if style_path.exists():
     with open(style_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
