@@ -169,7 +169,7 @@ elif page == "🧠 Quiz":
     if score < 5:
             st.write("You have not yet understood organic chemistry.")
         elif score < 10:
-        st.write("You are beginning to understand organic chemistry but not yet fully.")
+            st.write("You are beginning to understand organic chemistry but not yet fully.")
         elif score < 15:
             st.write("You have almost developed mastery of organic chemistry.")
         else:
