@@ -12,61 +12,74 @@ if style_path.exists():
     with open(style_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+# Initialize session state for splash screen visibility
+if 'splash_shown' not in st.session_state:
+    st.session_state.splash_shown = False
+
 # Create a placeholder for the splash screen
 splash_placeholder = st.empty()
 
-# HTML and CSS for the splash screen with a welcome message and animation
-splash_screen = """
-<style>
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+# Function to show the splash screen
+def show_splash_screen():
+    splash_screen = """
+    <style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    #splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #007bff;  /* Change to your preferred color */
+        color: white;
+        display: flex;
+        flex-direction: column;  /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        z-index: 9999;
+        text-align: center;  /* Center text */
+        animation: fadeIn 2s ease-in;  /* Apply fade-in animation */
     }
-}
+    </style>
 
-#splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #007bff;  /* Change to your preferred color */
-    color: white;
-    display: flex;
-    flex-direction: column;  /* Stack items vertically */
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    z-index: 9999;
-    text-align: center;  /* Center text */
-    animation: fadeIn 2s ease-in;  /* Apply fade-in animation */
-}
-</style>
+    <div id="splash">
+        Welcome to Organic Chemistry Tutor!
+    </div>
 
-<div id="splash">
-    Welcome to Organic Chemistry Tutor!
-</div>
+    <script>
+        setTimeout(function() {
+            document.getElementById("splash").style.display = "none";
+        }, 3000);  // Adjust time in milliseconds (3000 ms = 3 seconds)
+    </script>
+    """
 
-<script>
-    setTimeout(function() {
-        document.getElementById("splash").style.display = "none";
-    }, 3000);  // Adjust time in milliseconds (3000 ms = 3 seconds)
-</script>
-"""
+    # Show the splash screen in the placeholder
+    splash_placeholder.markdown(splash_screen, unsafe_allow_html=True)
 
-# Show the splash screen in the placeholder
-splash_placeholder.markdown(splash_screen, unsafe_allow_html=True)
+    # Wait for 3 seconds to simulate loading
+    time.sleep(3)
 
-# Wait for 3 seconds to simulate loading
-time.sleep(3)
+    # Clear the splash screen
+    splash_placeholder.empty()
 
-# Clear the splash screen
-splash_placeholder.empty()
+    # Set session state to indicate the splash has been shown
+    st.session_state.splash_shown = True
+
+# Show the splash screen only if it hasn't been shown yet
+if not st.session_state.splash_shown:
+    show_splash_screen()
+
 
 # Sidebar
 st.sidebar.image("OGT.jpg", width=100)
