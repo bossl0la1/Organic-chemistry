@@ -15,9 +15,20 @@ if style_path.exists():
 # Create a placeholder for the splash screen
 splash_placeholder = st.empty()
 
-# HTML and CSS for the splash screen with a video
+# HTML and CSS for the splash screen with a welcome message and animation
 splash_screen = """
 <style>
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #splash {
     position: fixed;
     top: 0;
@@ -33,27 +44,18 @@ splash_screen = """
     font-size: 40px;
     z-index: 9999;
     text-align: center;  /* Center text */
-}
-#video-container {
-    max-width: 80%;  /* Adjust video width */
-    height: auto;    /* Maintain aspect ratio */
+    animation: fadeIn 1s ease-in;  /* Apply fade-in animation */
 }
 </style>
 
 <div id="splash">
-    <div id="video-container">
-        <video autoplay muted playsinline style="width: 100%; height: auto;">
-            <source src="OGT.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
     Welcome to Organic Chemistry App!
 </div>
 
 <script>
     setTimeout(function() {
         document.getElementById("splash").style.display = "none";
-    }, 5000);  // Adjust time in milliseconds (3000 ms = 3 seconds)
+    }, 3000);  // Adjust time in milliseconds (3000 ms = 3 seconds)
 </script>
 """
 
@@ -61,10 +63,11 @@ splash_screen = """
 splash_placeholder.markdown(splash_screen, unsafe_allow_html=True)
 
 # Wait for 3 seconds to simulate loading
-time.sleep(5)
+time.sleep(3)
 
 # Clear the splash screen
 splash_placeholder.empty()
+
 # Sidebar
 st.sidebar.image("org.png", width=100)
 st.sidebar.title("🧪 Chemistry Tutor")
