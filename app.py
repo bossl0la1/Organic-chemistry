@@ -34,11 +34,6 @@ splash_screen = """
     z-index: 9999;
     text-align: center;  /* Center text */
 }
-#splash video {
-    max-width: 80%;  /* Adjust video width */
-    height: auto;    /* Maintain aspect ratio */
-    margin-bottom: 20px;  /* Space between video and text */
-}
 #logo {
     position: absolute;  /* Position the image in the corner */
     top: 20px;          /* Adjust top position */
@@ -48,12 +43,14 @@ splash_screen = """
 </style>
 
 <div id="splash">
-    <video autoplay muted playsinline>
-        <source src="OGT logo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div id="video-container">
+        <video autoplay muted playsinline style="max-width: 80%; height: auto;">
+            <source src="OGT.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     Welcome to Organic Chemistry App!
-    <img id="logo" src="OGT Logo.jpg" alt="Logo">
+    <img id="logo" src="OGT.jpg" alt="Logo">
 </div>
 
 <script>
@@ -67,11 +64,10 @@ splash_screen = """
 splash_placeholder.markdown(splash_screen, unsafe_allow_html=True)
 
 # Wait for 3 seconds to simulate loading
-time.sleep(3)
+time.sleep(5)
 
 # Clear the splash screen
 splash_placeholder.empty()
-
 
 # Sidebar
 st.sidebar.image("org.png", width=100)
