@@ -49,7 +49,7 @@ splash_screen = """
 </style>
 
 <div id="splash">
-    Welcome to Organic Chemistry App!
+    Welcome to Organic Chemistry Tutor!
 </div>
 
 <script>
