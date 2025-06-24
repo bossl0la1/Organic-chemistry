@@ -69,7 +69,7 @@ time.sleep(3)
 splash_placeholder.empty()
 
 # Sidebar
-st.sidebar.image("org.png", width=100)
+st.sidebar.image("OGT.jpg", width=100)
 st.sidebar.title("🧪 Chemistry Tutor")
 page = st.sidebar.selectbox("📚 Choose a topic", [
     "🏠 Home",
@@ -109,7 +109,7 @@ elif page == "Introduction to Organic chemistry":
     st.title("Introduction to Organic chemistry")
     st.write("This is a video to provide a quickstart to your journey in Organic Chemistry:")
     st.video("lesson.mp4", width=500) 
-    st.image("org.png", width=100)
+    st.image("OGT.jpg", width=100)
     
 
 # ---------- FUNCTIONAL GROUPS ----------
