@@ -147,8 +147,6 @@ elif page == "🧬 Functional Groups":
             st.write(f"**Functional Group:** `{group}`")
             st.write(f"**Example:** {example}")
             st.write(f"**Description:** {desc}")
-        
-        st.image("OGT.jpg", width=100)
 
 # ---------- IUPAC NAMING ----------
 elif page == "🔤 IUPAC Naming":
@@ -178,8 +176,6 @@ elif page == "🔤 IUPAC Naming":
         result = examples.get(formula.strip(), "❌ Not found in examples. Try a common compound.")
         st.info(result)
 
-        st.image("OGT.jpg", width=100)
-
 # ---------- HOMOLOGOUS SERIES ----------
 elif page == "📈 Homologous Series":
     st.title("📈 Homologous Series")
@@ -203,7 +199,6 @@ elif page == "📈 Homologous Series":
     st.markdown(f"- **Alkene:** C{n}H{2*n}")
     st.markdown(f"- **Alkyne:** {'Invalid for n<2' if n < 2 else f'C{n}H{2*n - 2}'}")
     st.markdown(f"- **Alcohol:** C{n}H{2*n + 1}OH")
-    st.image("OGT.jpg", width=100)
 
 # ---------- QUIZ ----------
 elif page == "🧠 Quiz":
@@ -252,7 +247,6 @@ elif page == "🧠 Quiz":
     else:
         st.write("You have attained mastery of organic chemistry!")
 
-st.image("OGT.jpg", width=100)
 
         
    
