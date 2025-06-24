@@ -15,7 +15,7 @@ if style_path.exists():
 # Create a placeholder for the splash screen
 splash_placeholder = st.empty()
 
-# HTML and CSS for the splash screen
+# HTML and CSS for the splash screen with a video and an image
 splash_screen = """
 <style>
 #splash {
@@ -27,21 +27,39 @@ splash_screen = """
     background-color: #007bff;  /* Change to your preferred color */
     color: white;
     display: flex;
+    flex-direction: column;  /* Stack items vertically */
     justify-content: center;
     align-items: center;
     font-size: 40px;
     z-index: 9999;
+    text-align: center;  /* Center text */
+}
+#splash video {
+    max-width: 80%;  /* Adjust video width */
+    height: auto;    /* Maintain aspect ratio */
+    margin-bottom: 20px;  /* Space between video and text */
+}
+#logo {
+    position: absolute;  /* Position the image in the corner */
+    top: 20px;          /* Adjust top position */
+    right: 20px;        /* Adjust right position */
+    max-width: 100px;   /* Set a maximum width for the logo */
 }
 </style>
 
 <div id="splash">
-    Welcome to Organic Chemistry Tutor!
+    <video autoplay muted playsinline>
+        <source src="OGT logo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    Welcome to Organic Chemistry App!
+    <img id="logo" src="OGT Logo.jpg" alt="Logo">
 </div>
 
 <script>
     setTimeout(function() {
         document.getElementById("splash").style.display = "none";
-    }, 3000);  // Adjust time in milliseconds (3000 ms = 3 seconds)
+    }, 5000);  // Adjust time in milliseconds (3000 ms = 3 seconds)
 </script>
 """
 
