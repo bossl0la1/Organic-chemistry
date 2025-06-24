@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 from pathlib import Path
 import qrcode
 from io import BytesIO
@@ -10,6 +11,42 @@ style_path = Path("styles.css")
 if style_path.exists():
     with open(style_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# HTML and CSS for the splash screen
+splash_screen = """
+<style>
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #007bff;  /* Change to your preferred color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    z-index: 9999;
+}
+</style>
+
+<div id="splash">
+    Welcome to Organic Chemistry App!
+</div>
+
+<script>
+    setTimeout(function() {
+        document.getElementById("splash").style.display = "none";
+    }, 3000);  // Adjust time in milliseconds (3000 ms = 3 seconds)
+</script>
+"""
+
+# Display the splash screen
+st.markdown(splash_screen, unsafe_allow_html=True)
+
+# Simulate loading time
+time.sleep(3)  # Keep the app running for 3 seconds
 
 # Sidebar
 st.sidebar.image("org.png", width=100)
