@@ -126,7 +126,7 @@ video_html = """
 
 # Display the video using Streamlit's markdown method
 st.markdown(video_html, unsafe_allow_html=True)
-    st.image("OGT.jpg", width=100)
+st.image("OGT.jpg", width=100)
 
 # ---------- INTRODUCTION ----------
 elif page == "Introduction to Organic chemistry":
