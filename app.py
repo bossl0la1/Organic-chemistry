@@ -34,6 +34,7 @@ if page == "🏠 Home":
     - 🔤 IUPAC Naming
     - 📈 Homologous Series
     - 🧠 Practice Quiz
+    - [App review](https://docs.google.com/forms/d/e/1FAIpQLSebo2O7Tv0vyihmrY4eWxTDz87H9DaWemPFJO9tZrrwWyXKWQ/viewform?usp=dialog)
     - Made by Damilola Ayo-Afolabi and Olaniyan Oladayo
 
     Share this app or open it on your phone by scanning the QR code below:
