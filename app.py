@@ -43,7 +43,7 @@ splash_screen = """
 <div id="splash">
     <div id="video-container">
         <video autoplay muted playsinline style="width: 100%; height: auto;">
-            <source src="OGT.mp4" type="video/mp4">
+            <source src="C:\Users\pc\Desktop\RISS\Chemistry\Organic Chemistry\OGT.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
