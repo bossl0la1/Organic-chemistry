@@ -15,7 +15,7 @@ if style_path.exists():
 # Create a placeholder for the splash screen
 splash_placeholder = st.empty()
 
-# HTML and CSS for the splash screen with a video and an image
+# HTML and CSS for the splash screen with a video
 splash_screen = """
 <style>
 #splash {
@@ -34,23 +34,20 @@ splash_screen = """
     z-index: 9999;
     text-align: center;  /* Center text */
 }
-#logo {
-    position: absolute;  /* Position the image in the corner */
-    top: 20px;          /* Adjust top position */
-    right: 20px;        /* Adjust right position */
-    max-width: 100px;   /* Set a maximum width for the logo */
+#video-container {
+    max-width: 80%;  /* Adjust video width */
+    height: auto;    /* Maintain aspect ratio */
 }
 </style>
 
 <div id="splash">
     <div id="video-container">
-        <video autoplay muted playsinline style="max-width: 80%; height: auto;">
+        <video autoplay muted playsinline style="width: 100%; height: auto;">
             <source src="OGT.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
     Welcome to Organic Chemistry App!
-    <img id="logo" src="OGT.jpg" alt="Logo">
 </div>
 
 <script>
@@ -68,7 +65,6 @@ time.sleep(5)
 
 # Clear the splash screen
 splash_placeholder.empty()
-
 # Sidebar
 st.sidebar.image("org.png", width=100)
 st.sidebar.title("🧪 Chemistry Tutor")
