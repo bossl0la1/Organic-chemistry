@@ -44,7 +44,7 @@ splash_screen = """
     font-size: 40px;
     z-index: 9999;
     text-align: center;  /* Center text */
-    animation: fadeIn 1s ease-in;  /* Apply fade-in animation */
+    animation: fadeIn 2s ease-in;  /* Apply fade-in animation */
 }
 </style>
 
