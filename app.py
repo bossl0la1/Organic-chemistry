@@ -116,6 +116,16 @@ if page == "🏠 Home":
     buf = BytesIO()
     qr.save(buf, format="PNG")
     st.image(buf.getvalue(), width=200, caption="📱 Scan to open app")
+    # HTML code for the video with autoplay
+video_html = """
+<video width="100%" height="auto" autoplay muted loop>
+    <source src="OGT.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+"""
+
+# Display the video using Streamlit's markdown method
+st.markdown(video_html, unsafe_allow_html=True)
     st.image("OGT.jpg", width=100)
 
 # ---------- INTRODUCTION ----------
