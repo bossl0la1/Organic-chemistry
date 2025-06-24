@@ -12,6 +12,9 @@ if style_path.exists():
     with open(style_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+# Create a placeholder for the splash screen
+splash_placeholder = st.empty()
+
 # HTML and CSS for the splash screen
 splash_screen = """
 <style>
@@ -32,7 +35,7 @@ splash_screen = """
 </style>
 
 <div id="splash">
-    Welcome to Organic Chemistry App!
+    Welcome to Organic Chemistry Tutor!
 </div>
 
 <script>
@@ -42,11 +45,15 @@ splash_screen = """
 </script>
 """
 
-# Display the splash screen
-st.markdown(splash_screen, unsafe_allow_html=True)
+# Show the splash screen in the placeholder
+splash_placeholder.markdown(splash_screen, unsafe_allow_html=True)
 
-# Simulate loading time
-time.sleep(3)  # Keep the app running for 3 seconds
+# Wait for 3 seconds to simulate loading
+time.sleep(3)
+
+# Clear the splash screen
+splash_placeholder.empty()
+
 
 # Sidebar
 st.sidebar.image("org.png", width=100)
